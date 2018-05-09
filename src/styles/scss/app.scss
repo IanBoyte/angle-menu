@@ -1,0 +1,172 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.nav-container {
+
+  .menu-wrapper {
+    position: absolute;
+    bottom: 0px;
+    left: -140vh;
+    height: 141.421356237309504880168872420969807856967187537694807317vh;
+    width: 140vh;
+    transform-origin: bottom right;
+    transform: rotate(0deg);
+    background: #252530;
+    transition: transform .5s ease-in-out;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      transform: rotate(-45deg);
+      transform-origin: bottom right;
+      margin-bottom: 150px;
+      text-align: left;
+      list-style: none;
+
+      li {
+        color: white;
+        padding: 5vh 0;
+        position: relative;
+
+        span {
+          position: relative;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          border-radius: 100vh;
+          z-index: -1;
+        }
+
+        &:nth-child(1):before {
+          background: #24323e;
+          width: 172.75vh;
+          height: 172.75vh;
+          left: -86.375vh;
+        }
+
+        &:nth-child(2):before {
+          background: #2b4453;
+          width: 153vh;
+          height: 153vh;
+          left: -76.5vh;
+        }
+
+        &:nth-child(3):before {
+          background: #316072;
+          width: 132.5vh;
+          height: 132.5vh;
+          left: -66.25vh;
+        }
+
+        &:nth-child(4):before {
+          background: #3c7c90;
+          width: 112vh;
+          height: 112vh;
+          left: -56vh;
+        }
+
+        &:nth-child(5):before {
+          background: #418fa6;
+          width: 90.75vh;
+          height: 90.75vh;
+          left: -45.375vh;
+        }
+
+        &:nth-child(6):before {
+          background: #48a2ba;
+          width: 70vh;
+          height: 70vh;
+          left: -35vh;
+        }
+
+        &:nth-child(7):before {
+          background: #4dafc9;
+          width: 49.5vh;
+          height: 49.5vh;
+          left: -24.75vh;
+        }
+
+      }
+    }
+
+    .nav-rocket {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 80px;
+      transition: transform 1s ease-in-out;
+      transition-delay: .1s;
+
+      img {
+        width: 100%;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        height: 140vh;
+        width: 2px;
+        background-image: url("../../images/trail.png");
+        position: absolute;
+        bottom: calc(-140vh + 46px);
+        left: 37px;
+      }
+    }
+
+    // nav open styles
+    &.open {
+      transform: rotate(45deg);
+
+      .nav-rocket {
+        transform: translateY(-141.421356237309504880168872420969807856967187537694807317vh) translateY(160px);
+      }
+    }
+  }
+
+  .nav-button {
+    position: relative;
+    z-index: 5;
+  }
+}
+
+.page-content {
+  background: #e61a48;
+
+  h1 {
+    font-size: 482px;
+    font-weight: bold;
+  }
+}
